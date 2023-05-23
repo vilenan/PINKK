@@ -1,0 +1,45 @@
+.main-header {
+  color: $white;
+  background-color: $color-main;
+  background-image: url("../image/promo-background-mobile.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../image/promo-background-tablet.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../image/promo-background-desktop.jpg");
+  }
+}
+
+.main-header__title {
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: 33px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 96px;
+
+  &--catalog {
+    padding-bottom: 80px;
+  }
+
+  &--form {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+    padding-top: 180px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 170px;
+    padding-bottom: 90px;
+  }
+}

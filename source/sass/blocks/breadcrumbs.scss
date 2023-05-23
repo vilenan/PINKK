@@ -1,0 +1,22 @@
+.breadcrumbs__item {
+  box-sizing: content-box;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: $black-lighten;
+
+  &:hover:not(.breadcrumbs__item--current) {
+    background-color: $color-main-light;
+  }
+
+  &:active:not(.breadcrumbs__item--current) {
+    background-color: $color-main-lightest;
+  }
+
+  &--current {
+    background-color: $white;
+    border: 3px solid $color-main;
+  }
+}

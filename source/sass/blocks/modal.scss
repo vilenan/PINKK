@@ -1,0 +1,89 @@
+.modal {
+  padding-top: 44px;
+  box-shadow: 0 7px 15px $modal-shadow;
+  border-radius: 1px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 37px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.modal__close {
+  width: 100%;
+}
+
+.modal__text-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 192px;
+    padding-right: 192px;
+  }
+}
+
+.modal__button-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  &--success {
+    background-color: $grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--error {
+      background-color: $grey;
+      padding-left: 240px;
+      padding-right: 240px;
+    }
+
+    &--success {
+      background-color: $grey;
+      padding-left: 160px;
+      padding-right: 160px;
+    }
+  }
+}

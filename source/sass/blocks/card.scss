@@ -1,0 +1,130 @@
+.card--special {
+  position: relative;
+  margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.card__marker {
+  position: absolute;
+  background-color: $color-accent;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px 20px;
+  right: 20px;
+
+  @media (min-width: $tablet-width) {
+    right: 40px;
+    top: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 130px;
+    top: 54px;
+  }
+}
+
+.card__author {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.card__data {
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.card__rating {
+  position: relative;
+  text-transform: uppercase;
+  color: $color-accent;
+  font-size: 12px;
+  line-height: 24px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 38px;
+    margin-top: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../image/heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 12px;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.card__content {
+  background-color: $grey;
+  padding: 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 25px 25px 25px;
+    min-height: 155px;
+
+    &--special {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--special {
+      min-height: auto;
+    }
+  }
+}
+
+.card__image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card__caption {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card--special .card__content {
+  min-height: auto;
+}
+
+.card--special .card__caption {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+}
+
+.card--special .card__rating {
+  @media (min-width: $tablet-width) {
+    order: 3;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}

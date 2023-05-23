@@ -1,0 +1,228 @@
+.header {
+  background: $black-lighten;
+  color: $white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  @media (max-width: $desktop-width-only) {
+    &--nojs {
+      position: static;
+      background-color: $color-main;
+      background-image: none;
+    }
+
+    &--nav-opened {
+      background-image: none;
+      background-color: $color-main;
+    }
+
+    &--nav-closed .header__nav-list {
+      display: none;
+    }
+  }
+}
+
+.header__wrapper {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__navigation {
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+  }
+}
+
+.header__logo {
+  border-bottom: 1px solid $black;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 21px;
+  }
+}
+
+.header--nav-closed .header__logo {
+  border: none;
+}
+
+.header__logo-image {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  fill: $white;
+
+  &:hover {
+    fill: $color-accent;
+  }
+
+  &:active {
+    fill: $white;
+    opacity: 0.3;
+  }
+}
+
+.header__logo-glasses {
+  margin-right: 12px;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.header__toggle {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  border: none;
+  padding: 0;
+  width: 90px;
+  height: 66px;
+  background-color: transparent;
+  z-index: 10;
+  right: 0;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header--nojs .header__toggle {
+  display: none;
+}
+
+.header--nav-closed .header__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    top: 21px;
+    right: 20px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: $white;
+    box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+  }
+
+  &:hover::before {
+    background-color: $color-accent;
+    box-shadow: 0 10px 0 0 $color-accent, 0 20px 0 0 $color-accent;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.header--nav-opened .header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 3px;
+    background-color: $white;
+    top: 33px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $color-accent;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.header__nav-list {
+  @include reset;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -78px;
+  }
+}
+
+.header__nav-item {
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $white-darkest;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    margin-right: 78px;
+  }
+}
+
+.header__nav-link {
+  display: block;
+  color: $white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+
+  &[href]:hover {
+    color: $color-accent;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
+
+    &--current {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $white;
+        height: 2px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

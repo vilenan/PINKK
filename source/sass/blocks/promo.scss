@@ -1,0 +1,171 @@
+.promo {
+  background-color: $color-main;
+  color: $white;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../image/promo-background-tablet.jpg");
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../image/promo-background-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../image/promo-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../image/promo-background-desktop@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 119px;
+    position: relative;
+  }
+}
+
+.promo__text {
+  @media (min-width: $tablet-width) {
+    width: 340px;
+  }
+}
+
+.promo__intro {
+  background-image: url("../image/promo-background-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../image/promo-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    background-color: transparent;
+    padding-top: 212px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.promo__slogan {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.promo__image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -120px;
+  }
+}
+
+.promo__image img {
+  display: block;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.promo__list {
+  @include reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 38px;
+  padding-right: 38px;
+  margin-top: 34px;
+  margin-bottom: 22px;
+  z-index: 10;
+}
+
+.promo__button {
+  margin-top: 28px;
+  z-index: 10;
+}
+
+.promo__link {
+  display: block;
+  color: $white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  border: 3px solid $white;
+  border-radius: 29px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+
+  &:hover {
+    background-color: $white;
+    color: $color-accent;
+  }
+
+  &:active {
+    color: $color-accent-light;
+  }
+}
+
+.promo__details {
+  font-weight: light;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  z-index: 10;
+}
+
+.promo__logo {
+  display: flex;
+}
+
+.promo__logo--iphone {
+  background-image: url("../image/apple-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 56px;
+}
+
+.promo__logo--android {
+  background-image: url("../image/android-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 47px;
+}
+
+.promo__logo--windows {
+  background-image: url("../image/microsoft-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 41px;
+}

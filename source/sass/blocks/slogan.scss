@@ -1,0 +1,12 @@
+.slogan {
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}

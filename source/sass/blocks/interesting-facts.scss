@@ -1,0 +1,57 @@
+.interesting-facts {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    min-height: 276px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $grey;
+    padding-bottom: 67px;
+  }
+}
+
+.interesting-facts__item {
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../image/clock-icon.svg");
+    width: 238px;
+    height: 276px;
+  }
+}
+
+.interesting-facts__content {
+  margin-left: 310px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
+}
+
+.interesting-facts__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+}
+
+.interesting-facts__text {
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.interesting-facts__link {
+  color: $color-accent;
+
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

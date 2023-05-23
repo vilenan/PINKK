@@ -1,0 +1,162 @@
+.advantages {
+  overflow: hidden;
+  background-image: linear-gradient(175deg, $white 23%, $grey 23%);
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(175deg, $white 35%, $grey 35%);
+  }
+}
+
+.advantages__content {
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+    margin-top: 300px;
+    background-color: $grey;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.advantages__title {
+  font-weight: bold;
+  color: $black;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.advantages__intro {
+  padding-top: 10px;
+  padding-bottom: 96px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 58px;
+    padding-bottom: 47px;
+  }
+}
+
+.advantages__slogan {
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.advantages__list {
+  @include reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.advantages__item {
+  @media (min-width: $desktop-width) {
+    &--stage1::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 382px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../image/advantages-icon-1-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../image/advantages-icon-1-desktop@2x.png");
+      }
+    }
+
+    &--stage2::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 382px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../image/advantages-icon-2-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../image/advantages-icon-2-desktop@2x.png");
+      }
+    }
+
+    &--stage3::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 382px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../image/advantages-icon-3-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../image/advantages-icon-3-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.advantages__text {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.advantages__image {
+  margin-bottom: -45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -70px;
+    margin-right: 40px;
+    max-width: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

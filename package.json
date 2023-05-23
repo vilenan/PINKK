@@ -1,0 +1,41 @@
+{
+  "name": "pinkk",
+  "version": "1.0.0",
+  "description": "сайт фотоприложения",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "gulp",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vilenan/PINKK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vilenan/PINKK/issues"
+  },
+  "homepage": "https://vilenan.github.io/PINKK/",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "del": "^6.0.0",
+    "gh-pages": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss-csso": "^6.0.1",
+    "sass": "^1.62.0"
+  }
+}

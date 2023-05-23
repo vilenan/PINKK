@@ -1,0 +1,39 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__controls {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slider__control-back,
+.slider__control-forward {
+  border: none;
+  background-color: transparent;
+}
+
+.slider__breadcrumbs {
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
