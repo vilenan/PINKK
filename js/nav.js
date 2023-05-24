@@ -1,14 +1,14 @@
-const headerToggle = document.querySelector ('.header__toggle');
-const headerEl = document.querySelector ('.header');
+const burger = document.querySelector ('.burger');
+const menu = document.querySelector ('.navigation');
+const body = document.querySelector('.page__body');
+const header = document.querySelector('.header');
+const headerHeight = header.offsetHeight;
+console.log(headerHeight);
 
-headerEl.classList.remove('header--nojs');
+document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
-headerToggle.addEventListener('click', function(){
-  if (headerEl.classList.contains('header--nav-opened')) {
-    headerEl.classList.remove('header--nav-opened');
-    headerEl.classList.add('header--nav-closed');
-  } else {
-    headerEl.classList.add('header--nav-opened');
-    headerEl.classList.remove('header--nav-closed');
-  }
+burger.addEventListener('click', function(){
+    burger.classList.toggle('burger--active');
+    menu.classList.toggle('navigation--active');
+    body.classList.toggle('no-scroll');
 });
