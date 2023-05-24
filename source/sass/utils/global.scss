@@ -1,3 +1,11 @@
+body {
+  box-sizing: border-box;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;

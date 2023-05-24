@@ -17,10 +17,10 @@
 </head>
 
 <body class="page__body">
-  <header class="header header--nojs header--nav-opened">
+  <header class="header">
     <div class="header__wrapper">
-      <div class="header__logo">
-        <a class="header__logo-image">
+
+      <a class="header__logo">
           <svg class="header__logo-glasses" width="59" height="40">
             <use xlink:href="image/sprite.svg#glasses"></use>
           </svg>
@@ -28,25 +28,26 @@
             <use xlink:href="image/sprite.svg#logo"></use>
           </svg>
         </a>
-      </div>
-      <div class="header__navigation">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link header__nav-link--current">главная</a>
+      <nav class="header__navigation navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link--current">главная</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="catalog.html"> фотографии</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html"> фотографии</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="form.html">конкурс</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="form.html">конкурс</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
               Academy</a>
           </li>
         </ul>
-        <button class="header__toggle" type="button" aria-label="закрыть меню"></button>
-      </div>
+      </nav>
+      <button class="header__burger burger" type="button" aria-label="закрыть меню">
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
 
